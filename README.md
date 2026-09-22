@@ -72,22 +72,18 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 ## Program
 ```
 from collections import defaultdict
-import networkx as nx
-import matplotlib.pyplot as plt
 
-graph=defaultdict(list)
-G=nx.Graph()
-nodes,edges=map(int,input().split())
+graph = defaultdict(list)
+
+nodes, edges = map(int, input().split())
+
 for i in range(edges):
-    u,v=map(str,input().split())
+    u, v = input().split()
     graph[u].append(v)
     graph[v].append(u)
-    G.add_edge(u,v)
-nx.draw(G, with_labels=True, node_color="lightblue", edge_color="red", width=2, node_size=2000)
-plt.show()
+
 print(graph)
 
-#Depth First Search
 def dfs(graph, start, visited, path):
     path.append(start)
     visited[start] = True
@@ -98,12 +94,13 @@ def dfs(graph, start, visited, path):
 
     return path
 
-# input start node
 start = input()
 
 path = []
 visited = defaultdict(bool)
+
 traversepath = dfs(graph, start, visited, path)
+
 print("Depth First Search:")
 print(traversepath)
 

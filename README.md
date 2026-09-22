@@ -109,12 +109,12 @@ print(traversepath)
 <hr>
 <h3>Sample Input</h3>
 <hr>
-4 4
-A B
-A C
-B D
-C D
-A
+4 4 <BR>
+A B <BR>
+A C <BR>
+B D <BR>
+C D <BR>
+A   <BR>
 <hr>
 <h3>Sample Output</h3>
 <hr>
